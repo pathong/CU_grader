@@ -7,11 +7,11 @@ s2 = int(input())
 t1 = h1*60*60 + m1*60 + s1
 t2 = h2*60*60 + m2*60 + s2
 dt = t2 - t1
+if dt < 0:
+    dt += 24 * 3600
 dh = dt // (60*60)
 dt -= dh * 60*60
 dm = dt // 60
 dt -= dm*60
 ds = dt
-if h2 < h1:
-    dh = (24 + (h2 - h1)) % 24
 print(str(dh)+":"+str(dm)+":"+str(ds))
