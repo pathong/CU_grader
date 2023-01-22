@@ -3,20 +3,19 @@ n = input().split(",")
 n[1] = "0" + n[1]
 
 
-f = n[0]
-a = n[1] + n[2]
-na = n[1]
-t = int(a) - int(na)
-b = "9"* len(n[2]) + "0" * (len(na)-1)
-b = 10 ** (len(a)-1) - 10 ** (len(na)-1)
+front = n[0]
+_all = n[1] + n[2]
+not_all = n[1]
+top = int(_all) - int(not_all)
+buttom = 10 ** (len(_all)-1) - 10 ** (len(not_all)-1)
 
-t += int(f) * int(b)
+top += int(front) * int(buttom)
 
-gcd = math.gcd(t,b)
+gcd = math.gcd(top,buttom)
 
-t //= gcd
-b //= gcd
-print("{0} / {1}".format(t,b))
+top //= gcd
+buttom //= gcd
+print("{0} / {1}".format(top,buttom))
 
 
 
