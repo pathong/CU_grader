@@ -45,22 +45,5 @@ def union(r1,r2):
 def iou(r1,r2):
     return intersection(r1,r2) / union(r1,r2)
     
-r1=[1.0, 4.0, 1.5, 2.0]
-r2=[2.0, 5.0, 2.5, 2.0]
-r3=[4.0, 5.5, 1.5, 3.5]
-r4=[6.0, 4.5, 1.5, 2.0]
-r5=[5.75, 7.0, 2.0, 5.0]
-print(center(r1))
-print(center(r2))
-print(round(distance(r1,r2),2))
-print(round(distance(r3,r4),2))
-print(intersection(r1,r2)) 
-print(intersection(r2,r3))
-print(intersection(r4,r5))
-print(intersection(r1,r5)) # กรณีโบนัส
-print(union(r1,r2))
-print(union(r2,r3))
-print(union(r4,r5))
-print(round(iou(r1,r2),2))
-print(round(iou(r2,r3),2))
-print(round(iou(r4,r5),2))
+
+

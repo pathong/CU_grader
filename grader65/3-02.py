@@ -1,26 +1,17 @@
-
 g = "FDCBA"
-
-
 def a_4(p:list):
     for i in range(len(p)):
         if p[i] in g:
             p[i] = g.index(p[i])
     return p
-
 a = a_4(input().split())
 b = a_4(input().split())
-
 def CheckPass(p:list)->bool:
     if p[2] >= g.index("A") and p[3] >= g.index("C") and p[4] >= g.index("C"):
         return True
     return False
-     
-
 pa = CheckPass(a)
 pb = CheckPass(b)
-
-
 if not pa and not pb:
     print("None")
 elif pa and not pb:
