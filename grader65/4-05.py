@@ -1,14 +1,19 @@
 n = input()
 w = input()
-
-ln = len(n)
-
 c = 0
-i = 0
-while True:
-    if w[i:i+ln] == n:
-        c += 1
-    if i+ln >= len(w):
-        break;
-    i += 1
+s = '"(),.\''
+li = w.strip().split()
+for l in li:
+    if n in l:
+        while l[0] in s or l[-1] in s:
+            if l[0] in s:
+                l = l[1:]
+            if l[-1] in s:
+                l = l[:-1]
+        if l == n:
+            c +=1
+
 print(c)
+
+
+
