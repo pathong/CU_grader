@@ -25,6 +25,7 @@ if invalid == False:
             for i in range(n-1,-1,-1):
                 li.append(matrix[i][j])
             ans.append(li)
+            print(ans)
     elif o == "180":
         for i in range(n-1,-1,-1):
             li = []
@@ -33,10 +34,10 @@ if invalid == False:
             ans.append(li)
     elif o == "flip":
         for i in range(n):
-            li = []
-            for j in range(len(matrix[0])-1, -1, -1):
-                li.append(matrix[i][j])
-            ans.append(li)
+            # li = []
+            # for j in range(len(matrix[0])-1, -1, -1):
+                # li.append(matrix[i][j])
+            ans.append(matrix[i][::-1])
     for i in range(len(ans)):
         print("".join(ans[i]))
 else:

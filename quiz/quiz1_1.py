@@ -1,21 +1,26 @@
 x = list(map(int, input().split()))
 k = int(input())
-s = 0
 
-t = x[0]
-li = []
-for i in range(len(x)):
-    if x[i] == t:
+
+s=0
+su = []
+li = [x[0]]
+for i in range(1,len(x)):
+    print(x[i])
+    if x[i] == li[0]:
         li.append(x[i])
-    else:
-        if len(li) < k:
-            s += sum(li)
-        t = x[i]
-        li = [x[i]]
-if len(li) < k:
-    s += sum(li)
+    elif x[i] != li[0]:
+        su.append(li)
+        li = []
+        li.append(x[i])
+        if i == len(x)-1 : su.append(li)
+
+for l in su:
+    if len(l) < k:
+        s+=sum(l)
+
+print(su)
 print(s)
-        
     
 
 

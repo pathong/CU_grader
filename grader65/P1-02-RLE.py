@@ -18,6 +18,7 @@ elif o == "str2RLE":
             c =1
             li.append(i)
     li.append(str(c))
+
     ans = " ".join(li)
     print(ans)
 else: print("Error")
