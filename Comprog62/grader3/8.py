@@ -44,7 +44,7 @@ for name, li in party.items():
                 if vote != m:
                     cob.append(people)
 
-        ans = ",".join(cob) if len(cob) > 0 else "No Cobra"
+        ans = ",".join(cob) if len(cob) > 0 else "No cobra"
     print(ans)
 
 

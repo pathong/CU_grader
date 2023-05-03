@@ -1,0 +1,26 @@
+class Student():
+    prop = list() 
+    def __init__(self,_n:str,_g:str,_a:str,_s:str) -> None:
+        self.prop[0] = _n
+        self.prop[1] = _g
+        self.prop[2] = _a
+        self.prop[3] = _s
+    def isMe(self,check:list):
+        for c in check:
+            if c in self.prop: return " ".join(self.prop)
+
+
+
+li = []
+n = int(input())
+for _ in range(n):
+    n,g,a,s = input().strip().split()
+    li.append(Student(n,g,a,s))
+
+check = input().split()
+ans = []
+for s in li:
+    if s.isMe
+
+
+

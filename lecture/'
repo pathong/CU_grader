@@ -1,0 +1,8 @@
+n = int(input())
+pizza_time_you_dumb = {'PZ871': 265.25, 'PZ953':246.50, 'Z1983':256.50, 'Z2853':272.50, 'LC673':309.25}
+for _ in n:
+    i = input().split()
+
+    id = i[0]
+    i.pop(0)
+
